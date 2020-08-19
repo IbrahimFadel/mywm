@@ -1,5 +1,5 @@
 # mywm
-A small Xlib tiling window manager
+A small floating window manager
 
 
 ## Development
