@@ -1,8 +1,12 @@
-BIN=wm
+BIN=mywm
+PREFIX=/usr
 SRC_FILE=wm.cpp
 CC=g++
-C_FLAGS=-Wall -pedantic
 LD_FLAGS=-lX11
 
 all:
-		$(CC) $(C_FLAGS) $(LD_FLAGS) -o $(BIN) $(SRC_FILE)
+		$(CC) $(LD_FLAGS) -o $(BIN) $(SRC_FILE)
+
+install:
+		make
+		install $(BIN) $(PREFIX)/bin
