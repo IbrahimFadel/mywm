@@ -5,8 +5,8 @@
 #include <vector>
 #include <unistd.h>
 
-#include "wm.h"
-#include "config.h"
+// #include "wm.h"
+// #include "config.h"
 
 using std::cout;
 using std::endl;
@@ -140,7 +140,7 @@ void button_press(XEvent *e)
 
     for (auto &c : windows)
     {
-        if (c->w = e->xbutton.subwindow)
+        if (c->w == e->xbutton.subwindow)
             cur = c;
     }
     // cur = e->xbutton.subwindow;
@@ -178,7 +178,7 @@ void update_current(Window w)
 {
     for (auto &c : windows)
     {
-        if (c->w = w)
+        if (c->w == w)
         {
             XSetInputFocus(d, w, RevertToParent, CurrentTime);
             XRaiseWindow(d, w);

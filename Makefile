@@ -1,8 +1,8 @@
 BIN=mywm
 PREFIX=/usr
-SRC_FILE=wm.cpp
-CC=g++
-LD_FLAGS=-lX11
+SRC_FILE=wm.c
+CC=cc
+LD_FLAGS=-lxcb -lxcb-keysyms -Wall -pedantic -std=c99
 
 all:
 		$(CC) $(LD_FLAGS) -o $(BIN) $(SRC_FILE)
